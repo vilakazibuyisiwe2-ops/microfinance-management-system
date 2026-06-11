@@ -6,6 +6,20 @@
   border-radius: 8px;
   text-align: center;
 }
+.main-nav {
+  background: var(--navy);
+  padding: 15px;
+  text-align: center;
+}
+.main-nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.main-nav a:hover {
+  color: var(--steel);
+}
 input {
   width: 100%;
   padding: 10px;
