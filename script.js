@@ -11,3 +11,17 @@ function loadAdmin() {
     document.getElementById("address").textContent =
         "Johannesburg, South Africa";
 }
+function login() {
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    if (
+        username === "admin" &&
+        password === "12345"
+    ) {
+        window.location.href = "admin.html";
+    } else {
+        document.getElementById("message").innerText =
+            "Invalid username or password";
+    }
+}
