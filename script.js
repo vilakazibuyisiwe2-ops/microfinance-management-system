@@ -25,3 +25,29 @@ function login() {
             "Invalid username or password";
     }
 }
+const amountInput = document.getElementById('amount');
+const monthsInput = document.getElementById('months');
+const summary = document.getElementById('summary');
+
+function calculateLoan() {
+  const amount = parseFloat(amountInput.value);
+  const months = parseInt(monthsInput.value);
+  
+  let interestRate = 0;
+  if (months <= 3) interestRate = 0.10;      // 10%
+  else if (months <= 6) interestRate = 0.15; // 15% 
+  else if (months <= 12) interestRate = 0.20; // 20%
+  else interestRate = 0.30;                   // 30% for 24 months
+
+  const total = amount + (amount * interestRate);
+  const monthly = total / months;
+
+  summary.innerHTML = `
+    <p><b>Total to repay:</b> R${total.toFixed(2)}</p>
+    <p><b>Monthly payment:</b> R${monthly.toFixed(2)}</p>
+    <p><b>Interest rate:</b> ${interestRate * 100}%</p>
+  `;
+}
+
+amountInput.addEventListener('input', calculateLoan);
+monthsInput.addEventListener('change', calculateLoan);
