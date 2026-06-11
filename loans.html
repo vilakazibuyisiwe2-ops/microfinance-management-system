@@ -1,1 +1,48 @@
+<header>
+  <h1>Loans Management</h1>
+</header>
 
+<section>
+  <h2>Loan Application</h2>
+
+  <form>
+    <input type="text" placeholder="Customer Name">
+    <input type="text" placeholder="ID Number">
+    <input type="number" placeholder="Loan Amount">
+    <input type="number" placeholder="Loan Term">
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+<section>
+  <h2>Loan Calculator</h2>
+
+  <input type="number" id="amount">
+  <input type="number" id="months">
+
+  <button onclick="calculateLoan()">
+    Calculate
+  </button>
+
+  <p id="result"></p>
+</section>
+
+<section>
+  <h2>Loan Applications</h2>
+
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Customer</th>
+      <th>Amount</th>
+      <th>Status</th>
+    </tr>
+
+    <tr>
+      <td>LN001</td>
+      <td>Sarah</td>
+      <td>R5000</td>
+      <td>Pending</td>
+    </tr>
+  </table>
+</section>
