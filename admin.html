@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<nav class="main-nav">
+    <a href="index.html">Dashboard</a>
+    <a href="customers.html">Customers</a>
+    <a href="loans.html">Loans</a>
+    <a href="repayments.html">Repayments</a>
+    <a href="approvals.html">Approvals</a>
+    <a href="analytics.html">Analytics</a>
+    <a href="admin.html">Admin</a>
+</nav>
+
+<section class="dashboard">
+    <h1>Administrator Profile</h1>
+
+    <div class="admin-card">
+        <h2 id="adminName">Loading...</h2>
+
+        <p><strong>Role:</strong> System Administrator</p>
+        <p><strong>Phone:</strong> <span id="phone"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p><strong>Address:</strong> <span id="address"></span></p>
+
+        <button onclick="loadAdmin()" class="btn-primary">
+            Load Profile
+        </button>
+    </div>
+</section>
+
+<script src="admin.js"></script>
+
+</body>
+</html>
