@@ -46,6 +46,19 @@ input {
   flex-wrap: wrap;
   margin-top: 40px;
 }
+.admin-card {
+    background: white;
+    width: 500px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.btn-primary {
+    padding: 10px 20px;
+    cursor: pointer;
+}
 
 .card {
   background: white;
