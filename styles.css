@@ -13,3 +13,15 @@ input {
   border: 1px solid var(--steel);
   border-radius: 4px;
 }
+.dashboard {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.dashboard .btn-primary {
+  display: inline-block;
+  margin: 15px;
+  font-size: 18px;
+  width: 200px;
+  text-decoration: none;
+}
