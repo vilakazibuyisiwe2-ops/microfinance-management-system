@@ -51,3 +51,27 @@ function calculateLoan() {
 
 amountInput.addEventListener('input', calculateLoan);
 monthsInput.addEventListener('change', calculateLoan);
+function processPayment() {
+
+    let customer =
+        document.getElementById("customerName").value;
+
+    let loan =
+        document.getElementById("loanNumber").value;
+
+    let balance =
+        parseFloat(document.getElementById("balance").value);
+
+    let payment =
+        parseFloat(document.getElementById("payment").value);
+
+    let newBalance = balance - payment;
+
+    document.getElementById("receipt").innerHTML = `
+        <h3>Payment Successful</h3>
+        <p><strong>Customer:</strong> ${customer}</p>
+        <p><strong>Loan Number:</strong> ${loan}</p>
+        <p><strong>Payment:</strong> R${payment}</p>
+        <p><strong>Remaining Balance:</strong> R${newBalance}</p>
+    `;
+}
