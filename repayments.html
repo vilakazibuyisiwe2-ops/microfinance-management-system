@@ -1,1 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repayments - MicroFinance Pro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Loan Repayment System</h1>
 
+    <label>Customer Name</label>
+    <input type="text" id="customerName">
+
+    <label>Loan Number</label>
+    <input type="text" id="loanNumber">
+
+    <label>Outstanding Balance (R)</label>
+    <input type="number" id="balance" value="5000">
+
+    <label>Payment Amount (R)</label>
+    <input type="number" id="payment">
+
+    <button onclick="processPayment()">
+        Process Payment
+    </button>
+
+    <div id="receipt"></div>
+</div>
+
+<script src="js/repayments.js"></script>
+</body>
+</html> 
