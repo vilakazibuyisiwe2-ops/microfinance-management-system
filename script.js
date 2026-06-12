@@ -75,3 +75,17 @@ function processPayment() {
         <p><strong>Remaining Balance:</strong> R${newBalance}</p>
     `;
 }
+const customers = 125;
+const activeLoans = 87;
+const repaidLoans = 28;
+const defaultRate = "5%";
+
+document.getElementById("customers").innerText = customers;
+document.getElementById("activeLoans").innerText = activeLoans;
+document.getElementById("repaidLoans").innerText = repaidLoans;
+document.getElementById("defaultRate").innerText = defaultRate;
+
+console.log("Analytics Dashboard Loaded");
+function generateReport() {
+    alert("Monthly report generated successfully!");
+}
