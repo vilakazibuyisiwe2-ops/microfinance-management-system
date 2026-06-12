@@ -116,3 +116,75 @@ input {
     padding: 20px;
     background: #f4f4f4;
 }
+.analytics-cards{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    width:200px;
+}
+
+.card p{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.chart-container{
+    display:flex;
+    align-items:flex-end;
+    gap:15px;
+    height:300px;
+    margin:30px 0;
+}
+
+.bar{
+    width:60px;
+    background:#007bff;
+    position:relative;
+    border-radius:5px 5px 0 0;
+}
+
+.bar span{
+    position:absolute;
+    bottom:-25px;
+    left:15px;
+}
+
+.performance-box{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.insights{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    margin-top:20px;
+}
+
+table th,
+table td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:left;
+}
+
+table th{
+    background:#007bff;
+    color:white;
+}
