@@ -31,9 +31,6 @@
   background: rgba(0, 0, 0, 0.5);  /* 50% black overlay */
   z-index: 1;
 }
-.hero {
-  background-image: url('business.jpg');
-}
 .main-nav {
   background: var(--navy);
   padding: 15px;
