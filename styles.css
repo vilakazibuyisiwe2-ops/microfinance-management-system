@@ -67,3 +67,27 @@ input {
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.container button {
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+#receipt {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f4f4f4;
+}
