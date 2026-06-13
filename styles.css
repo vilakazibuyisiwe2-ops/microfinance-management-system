@@ -27,9 +27,59 @@ body::before {
   background: rgba(0, 0, 0, 0.6);  /* 60% dark overlay */
   z-index: -1;
 }
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    flex-wrap: wrap;
+}
 
-/* 2. Center all containers, kill left-align */
-.container, .dashboard, .admin-card, .login-box, .card, .performance-box, .insights {
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+{
   margin: 40px auto !important;    /* auto = center */
   text-align: center !important;   /* center text inside */
   max-width: 800px;
@@ -39,24 +89,6 @@ body::before {
   border-radius: 10px;
   border: 1px solid rgba(255,255,255,0.2);
   color: white;
-}
-
-/* 3. Hero section fills screen */
-.hero {
-  min-height: 100vh;               /* 100% screen height, not 80vh */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  position: relative;
-  margin: 0;
-  padding: 0;
-}
-
-/* 4. Make all text white/bright */
-h1, h2, h3, p, label, span, td, th {
-  color: white !important;
 }
 
 /* 5. Inputs + buttons centered */
