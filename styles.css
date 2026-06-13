@@ -8,12 +8,12 @@ html, body {
 
 body {
   background-image: url('business.jpg');
-  background-size: cover;          /* fills whole screen */
-  background-position: center;     /* person stays middle on phone */
+  background-size: cover;         
+  background-position: center;     
   background-repeat: no-repeat;
-  background-attachment: fixed;    /* picture stays when you scroll */
-  color: white;                    /* ALL text white since pic is dark */
-  text-align: center;              /* center everything by default */
+  background-attachment: fixed;    
+  color: white;                   
+  text-align: center;             
 }
 
 /* Dark overlay so white text pops */
@@ -27,57 +27,179 @@ body::before {
   background: rgba(0, 0, 0, 0.6);  /* 60% dark overlay */
   z-index: -1;
 }
-.top-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    flex-wrap: wrap;
+/* ==========================
+   GLOBAL
+========================== */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
 }
 
-.nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-
-.nav-links a {
-    text-decoration: none;
+body {
+    background-image: url("business.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: white;
-    font-size: 14px;
+    position: relative;
 }
+
+/* Dark overlay */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    z-index: -1;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.top-nav {
+    text-align: center;
+    padding-top: 25px;
+}
+
+.logo {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* ==========================
+   NAVIGATION
+========================== */
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px 20px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.main-nav a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* ==========================
+   HERO
+========================== */
 
 .hero {
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 20px;
+    padding: 80px 20px;
 }
 
-.hero-content h1 {
-    font-size: 2rem;
+.dashboard-card {
+    max-width: 850px;
+    width: 90%;
+    text-align: center;
+
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(8px);
+
+    padding: 40px;
+    border-radius: 15px;
+
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.dashboard-card h2 {
+    font-size: 3rem;
     margin-bottom: 15px;
 }
 
-.hero-content p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
+.dashboard-card p {
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
+/* ==========================
+   BUTTONS
+========================== */
+
 .hero-buttons {
+    margin-top: 30px;
+
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
 .btn {
-    padding: 12px 20px;
-    border-radius: 8px;
+    background: #00c3ff;
+    color: white;
     text-decoration: none;
+
+    padding: 14px 28px;
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: all 0.3s ease;
 }
+
+.btn:hover {
+    background: #00d9ff;
+    transform: scale(1.05);
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 768px) {
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .dashboard-card h2 {
+        font-size: 2rem;
+    }
+
+    .dashboard-card p {
+        font-size: 1rem;
+    }
+
+    .main-nav {
+        gap: 8px;
+    }
+
+    .main-nav a {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 220px;
+    }
 
 {
   margin: 40px auto !important;    /* auto = center */
