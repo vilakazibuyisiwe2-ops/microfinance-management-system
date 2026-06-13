@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Microfinance Pro</title>
+    <title>MicroFinance Pro</title>
 
     <link rel="stylesheet" href="styles.css">
     <script defer src="JavaScript.js"></script>
@@ -11,11 +11,12 @@
 
 <body>
 
-<header>
-    <nav class="top-nav">
-        <h2>MicroFinance Pro</h2>
+    <!-- Header -->
+    <header class="top-nav">
 
-        <div class="nav-links">
+        <h1 class="logo">MicroFinance Pro</h1>
+
+        <nav class="main-nav">
             <a href="index.html">Dashboard</a>
             <a href="customer.html">Customers</a>
             <a href="loans.html">Loans</a>
@@ -24,30 +25,37 @@
             <a href="analytics.html">Analytics</a>
             <a href="admin.html">Admin</a>
             <a href="login.html">Logout</a>
+        </nav>
+
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="dashboard-card">
+
+            <h2>Microfinance Management Dashboard</h2>
+
+            <p>
+                Monitor customers, loan applications,
+                approvals and repayments in real time.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="customer.html" class="btn">
+                    View Customers
+                </a>
+
+                <a href="loans.html" class="btn">
+                    Manage Loans
+                </a>
+
+            </div>
+
         </div>
-    </nav>
-</header>
 
-<section class="hero">
-    <div class="hero-content">
-        <h1>Microfinance Management Dashboard</h1>
-
-        <p>
-            Monitor customers, loan applications,
-            approvals and repayments in real time.
-        </p>
-
-        <div class="hero-buttons">
-            <a href="customer.html" class="btn">
-                View Customers
-            </a>
-
-            <a href="loans.html" class="btn">
-                Manage Loans
-            </a>
-        </div>
-    </div>
-</section>
+    </section>
 
 </body>
 </html>
