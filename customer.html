@@ -16,31 +16,28 @@
   gtag('config', 'G-SM5PENRZQH');
 </script>
 <body>
-  <div class="loan-form">
+  <div class="loan-form-container">
+  <form class="loan-form">
     <h2>Apply for a Loan</h2>
-    <form id="loanForm">
-      <label>Full Name</label>
-      <input type="text" id="name" required>
-
-      <label>Phone Number</label>
-      <input type="tel" id="phone" required>
-
-      <label>Loan Amount R</label>
-      <input type="number" id="amount" min="500" max="50000" required>
-
-      <label>Repayment Period</label>
-      <select id="months" required>
-        <option value="">Select months</option>
-        <option value="3">3 months</option>
-        <option value="6">6 months - 10%</option>
-        <option value="12">12 months - 20%</option>
-        <option value="24">24 months - 30%</option>
-      </select>
-
-      <div id="summary"></div>
-      <button type="submit">Submit Application</button>
-    </form>
-  </div>
+    <label>Full Name</label>
+    <input type="text" placeholder="Buyisiwe Vilakazi">
+    
+    <label>Phone Number</label>
+    <input type="tel" placeholder="082 123 4567">
+    
+    <label>Loan Amount R</label>
+    <input type="number" placeholder="5000">
+    
+    <label>Repayment Period</label>
+    <select>
+      <option>Select months</option>
+      <option>6 months</option>
+      <option>12 months</option>
+    </select>
+    
+    <button type="submit">Submit Application</button>
+  </form>
+</div>
 
   <script src="loan.js"></script>
 </body>
