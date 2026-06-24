@@ -271,3 +271,65 @@ table th {
   background: rgba(255,255,255,0.15);
   color: white;
 }
+/* MOBILE FIRST - Loan Form Fix */
+.loan-form-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.4);
+}
+
+.loan-form {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.loan-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.loan-form label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 12px 0 6px;
+  color: #333;
+}
+
+.loan-form input,
+.loan-form select {
+  width: 100%;
+  padding: 14px 12px;
+  font-size: 16px; /* Stops iPhone zoom */
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.loan-form button {
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+/* Desktop - make it wider */
+@media (min-width: 768px) {
+  .loan-form {
+    max-width: 500px;
+    padding: 40px;
+  }
+}
