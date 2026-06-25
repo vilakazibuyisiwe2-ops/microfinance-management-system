@@ -306,4 +306,88 @@ body {
         padding: 6px 12px;
     }
 }
+/* --- Premium Interactive Form Fields --- */
+.loan-form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 22px;
+    text-align: left;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #ffffff;
+    letter-spacing: 0.3px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 14px 18px;
+    font-size: 0.95rem;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Elegant placeholder color contrast on dark hulls */
+.form-input::placeholder {
+    color: #64748b;
+}
+
+/* Vibrant glow highlight upon element activation */
+.form-input:focus {
+    background: rgba(0, 0, 0, 0.4);
+    border-color: #00d4ff;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.25);
+}
+
+/* --- Styled Select Menu Dropdown Rules --- */
+.select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.form-select {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+/* Dropdown native OS options panel dark fallback styling */
+.form-select option {
+    background-color: #0d1e3d;
+    color: #ffffff;
+}
+
+.select-wrapper::after {
+    content: '▼';
+    font-size: 0.75rem;
+    color: #b0c4de;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: color 0.3s ease;
+}
+
+.select-wrapper:focus-within::after {
+    color: #00d4ff;
+}
+
+/* Specific modification ensuring submit buttons extend inside forms full-width */
+.loan-form .btn-primary {
+    max-width: 100%;
+    margin-top: 10px;
+}
 
