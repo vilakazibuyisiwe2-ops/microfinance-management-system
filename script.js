@@ -136,5 +136,35 @@ function submitLoanApplication() {
     // Clear the form fields seamlessly after validation processes 
     document.querySelector(".loan-form")?.reset();
 }
+// ==========================================
+// 4. REPAYMENT PROCESSING SYSTEM (repayments.html)
+// ==========================================
+function processPayment() {
+    const customerInput = document.getElementById("customerName");
+    const loanInput = document.getElementById("loanNumber");
+    const balanceInput = document.getElementById("balance");
+    const paymentInput = document.getElementById("payment");
+    const receipt = document.getElementById("receipt");
+
+    if (!customerInput || !loanInput || !balanceInput || !paymentInput || !receipt) return;
+
+    let customer = customerInput.value;
+    let loan = loanInput.value;
+    let balance = parseFloat(balanceInput.value) || 0;
+    let payment = parseFloat(paymentInput.value) || 0;
+    let newBalance = balance - payment;
+
+    // Strip default fallback styling configuration properties
+    receipt.classList.remove("empty-state");
+
+    receipt.innerHTML = `
+        <h3>Payment Receipt</h3>
+        <p><strong>Customer:</strong> <span>${customer}</span></p>
+        <p><strong>Loan Number:</strong> <span>${loan}</span></p>
+        <p><strong>Opening Balance:</strong> <span>R${balance.toFixed(2)}</span></p>
+        <p><strong>Payment Posted:</strong> <span>R${payment.toFixed(2)}</span></p>
+        <p class="receipt-highlight-total"><strong>Remaining Balance:</strong> <span>R${newBalance.toFixed(2)}</span></p>
+    `;
+}
 
 
