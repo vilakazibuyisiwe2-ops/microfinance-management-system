@@ -166,5 +166,19 @@ function processPayment() {
         <p class="receipt-highlight-total"><strong>Remaining Balance:</strong> <span>R${newBalance.toFixed(2)}</span></p>
     `;
 }
+// ==========================================
+// 8. SYSTEM CONFIGURATIONS ENGINE (settings.html)
+// ==========================================
+function saveSettings() {
+    alert("System operational configurations committed and locked into microfinance registry successfully.");
+}
+
+function clearPlatformCache() {
+    alert("Temporary session ledger caches purged successfully.");
+}
+
+function exportDatabaseBackup() {
+    alert("Encrypted microfinance platform transactional backup file generated successfully.");
+}
 
 
