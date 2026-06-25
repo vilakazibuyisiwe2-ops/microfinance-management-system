@@ -20,33 +20,52 @@
 
 <body>
 
-<div class="page-wrapper">
-  <div class="card">
-    <h2>Loan Approvals</h2>
+<!-- Unified Navigation Bar -->
+<header class="navbar-wrapper">
+    <nav class="main-nav">
+        <a href="index.html">Dashboard</a>
+        <a href="customers.html">Customers</a>
+        <a href="loans.html">Loans</a>
+        <a href="repayments.html">Repayments</a>
+        <a href="approvals.html" class="active">Approvals</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="admin.html">Admin</a>
+        <a href="settings.html">Settings</a>
+    </nav>
+</header>
 
-    <table>
-      <tr>
-        <th>Customer</th>
-        <th>Amount</th>
-        <th>Status</th>
-        <th>Action</th>
-      </tr>
+<main class="page-wrapper">
+    <!-- Styled with your premium 'business-class' overlay overlay -->
+    <div class="card business-class">
+        <h1 class="page-title">Loan Approvals</h1>
 
-      <tr>
-        <td>Buyi Sithole</td>
-        <td>R5000</td>
-        <td><span class="status yellow">Pre-Approval</span></td>
-        <td>
-          <button class="approve">Approve</button>
-          <button class="reject">Reject</button>
-        </td>
-      </tr>
-
-    </table>
-
-  </div>
-
-</div>
+        <div class="table-responsive">
+            <table class="approvals-table">
+                <thead>
+                    <tr>
+                        <th>Customer</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="customer-name">Buyi Sithole</td>
+                        <td class="loan-amount">R5,000</td>
+                        <td><span class="status yellow">Pre-Approval</span></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button onclick="approveLoan(this)" class="btn-action approve">Approve</button>
+                                <button onclick="rejectLoan(this)" class="btn-action reject">Reject</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
 
 </body>
 </html>
