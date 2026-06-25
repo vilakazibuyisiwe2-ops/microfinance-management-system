@@ -4,39 +4,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Loan Approvals - MicroFinance Pro</title>
+
   <link rel="stylesheet" href="styles.css">
-<script defer src="JavaScript.js"></script>
+  <script defer src="JavaScript.js"></script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SM5PENRZQH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SM5PENRZQH');
+  </script>
 </head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SM5PENRZQH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-SM5PENRZQH');
-</script>
 <body>
-  <h2>Loan Approvals</h2>
-  
-  <table>
-    <tr>
-      <th>Customer</th>
-      <th>Amount</th>
-      <th>Status</th>
-      <th>Action</th>
-    </tr>
-    <tr>
-      <td>Nomsa Dlamini</td>
-      <td>R5000</td>
-      <td><span class="status yellow">Pre-Approval</span></td>
-      <td>
-        <button class="approve">Approve</button>
-        <button class="reject">Reject</button>
-      </td>
-    </tr>
-  </table>
 
-  <script src="script.js"></script>
+<div class="page-wrapper">
+  <div class="card">
+    <h2>Loan Approvals</h2>
+
+    <table>
+      <tr>
+        <th>Customer</th>
+        <th>Amount</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+
+      <tr>
+        <td>Buyi Sithole</td>
+        <td>R5000</td>
+        <td><span class="status yellow">Pre-Approval</span></td>
+        <td>
+          <button class="approve">Approve</button>
+          <button class="reject">Reject</button>
+        </td>
+      </tr>
+
+    </table>
+
+  </div>
+
+</div>
+
 </body>
 </html>
