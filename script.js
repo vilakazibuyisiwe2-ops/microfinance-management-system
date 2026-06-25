@@ -126,11 +126,20 @@ function animateRowRemoval(row) {
         setTimeout(() => row.remove(), 600);
     }, 800);
 }
+// ==========================================
+// 7. CUSTOMER LOAN APPLICATION (customers.html)
+// ==========================================
+function submitLoanApplication() {
+    const name = document.getElementById("custName")?.value;
+    const amount = document.getElementById("custAmount")?.value;
+    
+    if (!name || !amount) return;
 
-------------------------------
-To move forward with refining your user interface, let me know:
-
-* Which website page file among your remaining un-styled sections (customers.html, loans.html, repayments.html) should we jump into next?
-* Do you need me to format the login display HTML screen to seamlessly match this newly fixed framework layout style?
+    // Direct interface validation feedback pop-up
+    alert(`Success! Loan application for R${parseFloat(amount).toLocaleString()} submitted for customer: ${name}.`);
+    
+    // Clear the form fields seamlessly after validation processes 
+    document.querySelector(".loan-form")?.reset();
+}
 
 
