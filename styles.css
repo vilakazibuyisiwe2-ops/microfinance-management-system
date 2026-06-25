@@ -1147,4 +1147,31 @@ body {
     margin-top: 50px !important;
     padding-bottom: 20px !important;
 }
+/* --- Direct Form Expansion Rule --- */
+.page-wrapper .card {
+    width: 100% !important;
+    max-width: 600px !important; /* Spreads out into a wide, premium corporate layout card */
+    min-width: 320px !important; /* Keeps it robust on standard phone displays */
+    margin: 40px auto !important; /* Centers it smoothly with room to breathe */
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Force the inner form layout to expand horizontally to match the new container width */
+.loan-form {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+}
+
+/* Make sure the form elements and button groups occupy full widths safely */
+.loan-form .form-group,
+.loan-form .button-group {
+    width: 100% !important;
+}
+
+.loan-form .btn-primary {
+    max-width: 100% !important;
+    width: 100% !important;
+}
 
