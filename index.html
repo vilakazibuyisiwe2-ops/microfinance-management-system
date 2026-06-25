@@ -3,68 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MicroFinance Pro</title>
-
+    <title>MicroFinance Pro - Dashboard</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="JavaScript.js"></script>
-</head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SM5PENRZQH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-SM5PENRZQH');
-</script>
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SM5PENRZQH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SM5PENRZQH');
+    </script>
+</head>
 <body>
 
-    <!-- Header -->
-    <header class="top-nav">
+<!-- Unified Navigation Bar -->
+<header class="navbar-wrapper">
+    <nav class="main-nav">
+        <a href="index.html" class="active">Dashboard</a>
+        <a href="customers.html">Customers</a>
+        <a href="loans.html">Loans</a>
+        <a href="repayments.html">Repayments</a>
+        <a href="approvals.html">Approvals</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="admin.html">Admin</a>
+        <a href="login.html">Logout</a>
+    </nav>
+</header>
 
-        <h1 class="logo">MicroFinance Pro</h1>
+<!-- Centered Landing Framework Wrapper -->
+<main class="page-wrapper">
+    <!-- Styled with your premium 'business-class' overlay -->
+    <section class="card business-class index-hero-card">
+        
+        <h1 class="logo-title">MicroFinance Pro</h1>
+        <h2 class="hero-subtitle">Management Dashboard</h2>
 
-        <nav class="main-nav">
-            <a href="index.html">Dashboard</a>
-            <a href="customer.html">Customers</a>
-            <a href="loans.html">Loans</a>
-            <a href="repayments.html">Repayments</a>
-            <a href="approvals.html">Approvals</a>
-            <a href="analytics.html">Analytics</a>
-            <a href="admin.html">Admin</a>
-            <a href="login.html">Logout</a>
-        </nav>
+        <p class="hero-description">
+            Monitor accounts, loan application queues, internal approval cycles, 
+            and real-time repayment collections inside a single interface.
+        </p>
 
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-
-        <div class="dashboard-card">
-
-            <h2>Microfinance Management Dashboard</h2>
-
-            <p>
-                Monitor customers, loan applications,
-                approvals and repayments in real time.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="customer.html" class="btn">
-                    View Customers
-                </a>
-
-                <a href="loans.html" class="btn">
-                    Manage Loans
-                </a>
-
-            </div>
-
+        <div class="hero-buttons">
+            <a href="customers.html" class="btn-primary">View Customers</a>
+            <a href="loans.html" class="btn-primary secondary-outline">Manage Loans</a>
         </div>
 
     </section>
+</main>
 
 </body>
 </html>
