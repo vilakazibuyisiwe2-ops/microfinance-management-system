@@ -390,4 +390,91 @@ body {
     max-width: 100%;
     margin-top: 10px;
 }
+/* --- Index / Dashboard Layout Custom Styles --- */
+.index-hero-card {
+    max-width: 700px; /* Perfect width wrapper for a centered welcome screen */
+    padding: 50px 40px;
+}
+
+.logo-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #ffffff, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 5px;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #cbd5e1;
+    margin-bottom: 25px;
+    border: none !important; /* Overrides the border accent used on analytics cards */
+    padding-left: 0 !important;
+    text-align: center !important;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #e0e6ed;
+    margin-bottom: 35px;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Hero Button Layout Layout --- */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Base style fallback overrides formatting 'a' anchors into high-end CTA targets */
+.index-hero-card .btn-primary {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Premium Transparent Alternative Accent Button Layout */
+.btn-primary.secondary-outline {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: none;
+}
+
+.btn-primary.secondary-outline:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: #00d4ff;
+    box-shadow: 0 8px 20px rgba(0, 212, 255, 0.15);
+}
+
+/* --- Mobile Viewport Responsiveness --- */
+@media (max-width: 600px) {
+    .logo-title {
+        font-size: 2.2rem;
+    }
+    
+    .index-hero-card {
+        padding: 35px 20px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .index-hero-card .btn-primary {
+        max-width: 100%;
+    }
+}
 
