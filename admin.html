@@ -3,49 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
+    <title>Microfinance Pro - Admin</title>
     <link rel="stylesheet" href="styles.css">
-<script defer src="JavaScript.js"></script>
+    <script defer src="JavaScript.js"></script>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SM5PENRZQH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-SM5PENRZQH');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SM5PENRZQH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SM5PENRZQH');
+    </script>
 </head>
 <body>
 
-<nav class="main-nav">
-    <a href="index.html">Dashboard</a>
-    <a href="customers.html">Customers</a>
-    <a href="loans.html">Loans</a>
-    <a href="repayments.html">Repayments</a>
-    <a href="approvals.html">Approvals</a>
-    <a href="analytics.html">Analytics</a>
-    <a href="admin.html">Admin</a>
-</nav>
+<header class="navbar-wrapper">
+    <nav class="main-nav">
+        <a href="index.html">Dashboard</a>
+        <a href="customers.html">Customers</a>
+        <a href="loans.html">Loans</a>
+        <a href="repayments.html">Repayments</a>
+        <a href="approvals.html">Approvals</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="admin.html" class="active">Admin</a>
+        <a href="settings.html">Settings</a>
+    </nav>
+</header>
 
-<section class="dashboard">
-    <h1>Administrator Profile</h1>
+<main class="dashboard-container">
+    <section class="dashboard">
+        <h1 class="page-title">Administrator Profile</h1>
 
-    <div class="admin-card">
-        <h2 id="adminName">Loading...</h2>
+        <div class="admin-card business-class">
+            <h2 id="adminName" class="admin-name">Loading...</h2>
 
-        <p><strong>Role:</strong> System Administrator</p>
-        <p><strong>Phone:</strong> <span id="phone"></span></p>
-        <p><strong>Email:</strong> <span id="email"></span></p>
-        <p><strong>Address:</strong> <span id="address"></span></p>
+            <div class="profile-details">
+                <p><strong>Role:</strong> <span class="text-muted">System Administrator</span></p>
+                <p><strong>Phone:</strong> <span id="phone" class="text-muted"></span></p>
+                <p><strong>Email:</strong> <span id="email" class="text-muted"></span></p>
+                <p><strong>Address:</strong> <span id="address" class="text-muted"></span></p>
+            </div>
 
-        <button onclick="loadAdmin()" class="btn-primary">
-            Load Profile
-        </button>
-    </div>
-</section>
+            <button onclick="loadAdmin()" class="btn-primary">
+                Load Profile
+            </button>
+        </div>
+    </section>
+</main>
 
 <script src="admin.js"></script>
 
 </body>
 </html>
+
