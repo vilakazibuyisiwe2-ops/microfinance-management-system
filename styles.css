@@ -1,1 +1,174 @@
+/* --- Core Reset & Dark Background --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.85)), 
+                url('business.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #e0e6ed; /* Light gray text for primary dark contrast */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- Responsive Layout Containers --- */
+.navbar-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.dashboard-container {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px 60px 20px;
+}
+
+.dashboard {
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+}
+
+/* --- Centered Navigation --- */
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 30px;
+}
+
+.main-nav a {
+    color: #b0c4de; /* Accessible bright tone on dark colors */
+    text-decoration: none;
+    padding: 8px 18px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.main-nav a:hover, 
+.main-nav a.active {
+    color: #ffffff;
+    background: rgba(0, 212, 255, 0.2); /* Bright cyan accent hue */
+    box-shadow: 0 0 12px rgba(0, 212, 255, 0.3);
+}
+
+/* --- Premium Business-Class Card Layout --- */
+.business-class {
+    background: rgba(255, 255, 255, 0.12); /* Whitish overlay alpha link */
+    backdrop-filter: blur(14px); /* Premium frosted glass styling */
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.admin-card {
+    border-radius: 16px;
+    padding: 40px 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admin-name {
+    color: #ffffff;
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+}
+
+.profile-details {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 30px;
+    background: rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.profile-details p {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.profile-details p:last-child {
+    margin-bottom: 0;
+}
+
+.text-muted {
+    color: #cbd5e1; /* Clean secondary light gray text */
+}
+
+/* --- High-Vibrancy Call To Action Buttons --- */
+.btn-primary {
+    background: linear-gradient(135deg, #00d4ff, #0072ff); /* High-impact bright cyan/blue gradient */
+    color: #ffffff;
+    border: none;
+    padding: 14px 35px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    width: 100%;
+    max-width: 260px;
+}
+
+.btn-primary:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 10px 25px rgba(0, 212, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.btn-primary:active {
+    transform: translateY(1px);
+}
+
+/* --- Responsive Media Viewport Breaks --- */
+@media (max-width: 768px) {
+    .main-nav {
+        border-radius: 15px;
+        gap: 8px;
+    }
+    
+    .main-nav a {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+    
+    .page-title {
+        font-size: 1.8rem;
+    }
+    
+    .admin-card {
+        padding: 30px 20px;
+    }
+}
 
