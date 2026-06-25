@@ -272,13 +272,13 @@ table th {
   color: white;
 }
 /* MOBILE FIRST - Loan Form Fix */
-.loan-form-container {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  background: rgba(0,0,0,0.4);
+.loan-container {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 30px;
+    background: silverwhite;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .loan-form {
@@ -288,12 +288,26 @@ table th {
   width: 100%;
   max-width: 400px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+   body {
+    background: #f4f7fb;
+    font-family: Arial, sans-serif;
 }
-
+}
+.loan-container h1 {
+    color: #1e3a5f;
+    margin-bottom: 25px;
+}
 .loan-form h2 {
   font-size: 24px;
   margin-bottom: 20px;
   text-align: center;
+}
+input,
+select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
 }
 
 .loan-form label {
@@ -304,26 +318,24 @@ table th {
   color: #333;
 }
 
-.loan-form input,
-.loan-form select {
-  width: 100%;
-  padding: 14px 12px;
-  font-size: 16px; /* Stops iPhone zoom */
-  border: 2px solid #ddd;
-  border-radius: 10px;
-  margin-bottom: 8px;
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
 }
 
-.loan-form button {
-  width: 100%;
-  padding: 16px;
-  font-size: 18px;
-  font-weight: 700;
-  background: #2563eb;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  margin-top: 15px;
+button {
+    background: #1e3a5f;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #284d7a;
 }
 
 /* Desktop - make it wider */
@@ -332,4 +344,139 @@ table th {
     max-width: 500px;
     padding: 40px;
   }
+}
+/* Center the whole form */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a; /* dark bg from your screenshot */
+  color: #fff;
+}
+
+/* Main container card */
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px 40px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  text-align: center; /* centers the H1 */
+  max-width: 600px;
+  width: 90%;
+}
+
+/* Title centered */
+h1 {
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+/* Form layout - center + spacing */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centers all inputs/buttons */
+  gap: 15px; /* space between inputs AND buttons */
+  align-items: center;
+}
+
+/* Make inputs/buttons same height + spacing */
+form input, 
+form button {
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: none;
+  font-size: 15px;
+}
+
+/* Input styling */
+form input {
+  background: #fff;
+  color: #000;
+  min-width: 160px;
+}
+
+/* Button styling + space */
+form button {
+  background: #3b82f6;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 8px; /* extra space between buttons if you add more */
+  transition: 0.2s;
+}
+
+form button:hover {
+  background: #2563eb;
+  transform: scale(1.05);
+}
+
+/* Labels stack nicely on mobile */
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 14px;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  form {
+    flex-direction: column;
+    gap: 12px;
+  }
+  form input, form button {
+    width: 100%;
+  }
+}
+/* Center everything on page */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  text-align: center;
+}
+
+/* Center the table + content */
+table {
+  margin: 0 auto; /* centers table horizontally */
+  border-collapse: collapse;
+}
+
+/* Center text in cells */
+th, td {
+  text-align: center;
+  padding: 10px 15px;
+}
+
+/* Center the h1 title too */
+h1 {
+  text-align: center;
+}
+h2:contains("Administrator Profile") {
+  text-align: center;
+}
+
+/* Center everything under that h2 */
+h2:contains("Administrator Profile") ~ p,
+h2:contains("Administrator Profile") ~ button {
+  text-align: center;
+  display: block;
+  margin: 8px auto;
+}
+h2:contains("Administrator Profile") {
+  text-align: center;
+}
+
+/* Center everything under that h2 */
+h2:contains("Administrator Profile") ~ p,
+h2:contains("Administrator Profile") ~ button {
+  text-align: center;
+  display: block;
+  margin: 8px auto;
 }
