@@ -1085,4 +1085,66 @@ body {
         font-size: 0.8rem !important;
     }
 }
+/* --- Global Layout Relaxation & Spacing Reset --- */
+
+/* 1. Ensure the main page wrapper can grow infinitely based on content length */
+.page-wrapper {
+    min-height: 100vh !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important; /* Changes center clustering to a natural vertical cascade */
+    align-items: center !important;
+    padding: 40px 20px 100px 20px !important; /* Adds massive breathing space at the very bottom */
+}
+
+/* 2. Unclasp the rigid card container so sections can stretch out safely */
+.card {
+    height: auto !important;
+    min-height: min-content !important;
+    display: block !important; /* Allows sections to push each other down naturally */
+    text-align: left !important; /* Modernized corporate alignment layout */
+}
+
+/* 3. Force clean, structured margins above and below every element section */
+.card h1.page-title {
+    text-align: center !important;
+    margin-bottom: 40px !important;
+}
+
+.card h2 {
+    margin: 45px 0 20px 0 !important; /* Creates dramatic, visible separation gaps between blocks */
+    padding-bottom: 8px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* 4. Fix specific squished blocks globally */
+.analytics-cards {
+    margin-bottom: 40px !important;
+}
+
+.chart-container {
+    margin-bottom: 40px !important;
+}
+
+.performance-box {
+    margin-bottom: 40px !important;
+}
+
+.insights {
+    margin-bottom: 40px !important;
+}
+
+.analytics-table {
+    margin-bottom: 45px !important;
+}
+
+/* 5. Center and elevate the final conversion button */
+.button-group {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin-top: 50px !important;
+    padding-bottom: 20px !important;
+}
 
