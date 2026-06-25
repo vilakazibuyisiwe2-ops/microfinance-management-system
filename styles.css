@@ -767,4 +767,190 @@ body {
         min-height: auto;
     }
 }
+/* --- Settings Page Segment Layout Styles --- */
+.settings-page-card {
+    max-width: 850px;
+}
+
+.settings-form {
+    width: 100%;
+}
+
+.settings-section {
+    background: rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.settings-section h3 {
+    font-size: 1.15rem;
+    color: #00d4ff;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* --- Toggles and Checkbox Rules --- */
+.toggle-group {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.toggle-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.toggle-item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.toggle-label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.toggle-desc {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    margin-top: 2px;
+}
+
+.form-checkbox {
+    width: 22px;
+    height: 22px;
+    accent-color: #00d4ff; /* Keeps standard checklist buttons matching your branding */
+    cursor: pointer;
+}
+
+/* --- Maintenance Auxiliary Layouts --- */
+.maintenance-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-secondary-action {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary-action:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: #ff4757; /* Gives system operations a distinct warning edge color */
+}
+
+.settings-form .btn-primary {
+    max-width: 100%;
+}
+/* --- Settings Page Segment Layout Styles --- */
+.settings-page-card {
+    max-width: 850px;
+}
+
+.settings-form {
+    width: 100%;
+}
+
+.settings-section {
+    background: rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.settings-section h3 {
+    font-size: 1.15rem;
+    color: #00d4ff;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* --- Toggles and Checkbox Rules --- */
+.toggle-group {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.toggle-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.toggle-item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.toggle-label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.toggle-desc {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    margin-top: 2px;
+}
+
+.form-checkbox {
+    width: 22px;
+    height: 22px;
+    accent-color: #00d4ff; /* Keeps standard checklist buttons matching your branding */
+    cursor: pointer;
+}
+
+/* --- Maintenance Auxiliary Layouts --- */
+.maintenance-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-secondary-action {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary-action:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: #ff4757; /* Gives system operations a distinct warning edge color */
+}
+
+.settings-form .btn-primary {
+    max-width: 100%;
+}
 
