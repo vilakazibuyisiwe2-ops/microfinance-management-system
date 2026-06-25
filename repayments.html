@@ -1,44 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Repayments - MicroFinance Pro</title>
-  <link rel="stylesheet" href="styles.css">
-<script defer src="JavaScript.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MicroFinance Pro - Repayments</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="JavaScript.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://googletagmanager.com"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SM5PENRZQH');
+    </script>
 </head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SM5PENRZQH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-SM5PENRZQH');
-</script>
 <body>
-  <div class="container">
-    <h1>Loan Repayment System</h1>
 
-    <label>Customer Name</label>
-    <input type="text" id="customerName">
+<!-- Unified Navigation Bar -->
+<header class="navbar-wrapper">
+    <nav class="main-nav">
+        <a href="index.html">Dashboard</a>
+        <a href="customers.html">Customers</a>
+        <a href="loans.html">Loans</a>
+        <a href="repayments.html" class="active">Repayments</a>
+        <a href="approvals.html">Approvals</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="admin.html">Admin</a>
+        <a href="login.html">Logout</a>
+    </nav>
+</header>
 
-    <label>Loan Number</label>
-    <input type="text" id="loanNumber">
+<main class="page-wrapper">
+    <!-- Styled with your premium 'business-class' overlay -->
+    <div class="card business-class repayments-page-card">
+        
+        <h1 class="page-title">Process Collection Repayment</h1>
 
-    <label>Outstanding Balance (R)</label>
-    <input type="number" id="balance" value="5000">
+        <div class="repayments-container-split">
+            
+            <!-- INPUT SUBMISSION PANEL -->
+            <form onsubmit="event.preventDefault(); processPayment();" class="repayment-form">
+                
+                <div class="form-group">
+                    <label class="form-label">Customer Name</label>
+                    <input type="text" id="customerName" class="form-input" placeholder="e.g. Buyisiwe Sithole" required>
+                </div>
 
-    <label>Payment Amount (R)</label>
-    <input type="number" id="payment">
+                <div class="form-group">
+                    <label class="form-label">Loan Number Reference</label>
+                    <input type="text" id="loanNumber" class="form-input" placeholder="e.g. MFP-98402" required>
+                </div>
 
-    <button onclick="processPayment()">
-        Process Payment
-    </button>
+                <div class="form-grid-inputs">
+                    <div class="form-group">
+                        <label class="form-label">Current Balance (R)</label>
+                        <input type="number" id="balance" class="form-input" placeholder="12000" step="0.01" required>
+                    </div>
 
-    <div id="receipt"></div>
-</div>
+                    <div class="form-group">
+                        <label class="form-label">Payment Amount (R)</label>
+                        <input type="number" id="payment" class="form-input" placeholder="2500" step="0.01" required>
+                    </div>
+                </div>
 
-<script src="js/repayments.js"></script>
+                <div class="button-group">
+                    <button type="submit" class="btn-primary">Post Capital Payment</button>
+                </div>
+
+            </form>
+
+            <!-- LIVE DYNAMIC AUDIT RECEIPT -->
+            <div class="receipt-outer-frame">
+                <div id="receipt" class="receipt-content-box empty-state">
+                    <div class="receipt-placeholder">
+                        <div class="receipt-icon">🧾</div>
+                        <p>Awaiting transaction posting records...</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</main>
+
 </body>
-</html> 
+</html>
