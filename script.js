@@ -1,11 +1,3 @@
-Yes, there are major clashes here that will break your website. Right now, you have CSS styling rules pasted directly into the middle of your JavaScript code, which will cause syntax errors and stop all scripts from running.
-Additionally, because your 8 pages share a single JavaScript.js file, code targeting specific elements (like amountInput or the analytics DOM elements) will crash with a "Cannot read properties of null" error whenever a user navigates to a page where those inputs don't exist.
-Here is the clean, optimized, and fully separated code to ensure nothing clashes.
-## 1. The Clashing CSS (Move this out of JavaScript)
-Cut the CSS code from the bottom of your JavaScript file and paste it into styles.css. It belongs exclusively in your style sheet.
-## 2. The Optimized JavaScript.js File
-Replace your entire JavaScript.js file with this clean, safe structure. It uses safe conditional checks (if (element)) so that your code loads perfectly across all 8 pages without crashing.
-
 // ==========================================// 1. ADMIN PROFILE LOGIC (admin.html)// ==========================================function loadAdmin() {
     const adminName = document.getElementById("adminName");
     const phone = document.getElementById("phone");
