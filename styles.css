@@ -171,4 +171,139 @@ body {
         padding: 30px 20px;
     }
 }
+/* --- Approvals Page Layout Variations --- */
+.approvals-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.approvals-table th, 
+.approvals-table td {
+    padding: 16px 20px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.approvals-table th {
+    background: rgba(255, 255, 255, 0.04);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.approvals-table td {
+    color: #e0e6ed;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.approvals-table tr:last-child td {
+    border-bottom: none;
+}
+
+.approvals-table tr:hover td {
+    background: rgba(255, 255, 255, 0.01);
+}
+
+/* --- Context Profiles --- */
+.customer-name {
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.loan-amount {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    color: #00d4ff; /* Highly vibrant currency identification accent */
+}
+
+/* --- High-Vibrancy Status Badges --- */
+.status {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.status.yellow {
+    background: rgba(255, 165, 2, 0.15);
+    color: #ffa502;
+    border: 1px solid rgba(255, 165, 2, 0.2);
+}
+
+/* --- Action Button Layout and Utilities --- */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-action {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.btn-action:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.15);
+}
+
+.btn-action:active {
+    transform: translateY(1px);
+}
+
+/* Approve (Vibrant Emerald Design) */
+.btn-action.approve {
+    background: linear-gradient(135deg, #2ed573, #1e90ff);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(46, 213, 115, 0.2);
+}
+
+/* Reject (Vibrant Crimson Design) */
+.btn-action.reject {
+    background: linear-gradient(135deg, #ff4757, #ff6b81);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(255, 71, 87, 0.2);
+}
+
+/* --- Responsive Layout Breakpoints --- */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 12px;
+}
+
+@media (max-width: 650px) {
+    .approvals-table th, 
+    .approvals-table td {
+        padding: 12px 14px;
+        font-size: 0.9rem;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        gap: 6px;
+    }
+    
+    .btn-action {
+        width: 100%;
+        padding: 6px 12px;
+    }
+}
 
