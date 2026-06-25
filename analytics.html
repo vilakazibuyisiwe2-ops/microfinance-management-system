@@ -19,63 +19,67 @@
 
 <body>
 
-<div class="page-wrapper">
+<!-- Unified Navigation Bar -->
+<header class="navbar-wrapper">
+    <nav class="main-nav">
+        <a href="index.html">Dashboard</a>
+        <a href="customers.html">Customers</a>
+        <a href="loans.html">Loans</a>
+        <a href="repayments.html">Repayments</a>
+        <a href="approvals.html">Approvals</a>
+        <a href="analytics.html" class="active">Analytics</a>
+        <a href="admin.html">Admin</a>
+        <a href="settings.html">Settings</a>
+    </nav>
+</header>
 
-    <div class="card">
+<main class="page-wrapper">
+    <!-- Styled with your requested 'business-class' overlay -->
+    <div class="card business-class">
 
-        <h1>Loan Analytics Dashboard</h1>
+        <h1 class="page-title">Loan Analytics Dashboard</h1>
 
         <!-- STATS SECTION -->
         <div class="analytics-cards">
-
             <div class="stat-box">
                 <h3>Total Customers</h3>
                 <p id="customers">125</p>
             </div>
-
             <div class="stat-box">
                 <h3>Active Loans</h3>
                 <p id="activeLoans">87</p>
             </div>
-
             <div class="stat-box">
                 <h3>Loans Repaid</h3>
                 <p id="repaidLoans">28</p>
             </div>
-
             <div class="stat-box">
                 <h3>Default Rate</h3>
                 <p id="defaultRate">5%</p>
             </div>
-
         </div>
 
         <!-- CHART -->
         <h2>Monthly Loan Applications</h2>
-
         <div class="chart-container">
-
             <div class="bar" style="height:120px;"><span>Jan</span></div>
             <div class="bar" style="height:170px;"><span>Feb</span></div>
             <div class="bar" style="height:140px;"><span>Mar</span></div>
             <div class="bar" style="height:220px;"><span>Apr</span></div>
             <div class="bar" style="height:180px;"><span>May</span></div>
             <div class="bar" style="height:260px;"><span>Jun</span></div>
-
         </div>
 
         <!-- COLLECTION -->
         <h2>Collection Performance</h2>
-
         <div class="performance-box">
-            <p>Expected Collection: R50,000</p>
-            <p>Collected: R43,000</p>
-            <p>Outstanding: R7,000</p>
+            <p><strong>Expected Collection:</strong> <span class="text-muted">R50,000</span></p>
+            <p><strong>Collected:</strong> <span class="text-muted">R43,000</span></p>
+            <p><strong>Outstanding:</strong> <span class="text-muted">R7,000</span></p>
         </div>
 
         <!-- INSIGHTS -->
         <h2>Portfolio Insights</h2>
-
         <ul class="insights">
             <li>✔ Loan approvals increased by 15%</li>
             <li>✔ Repayments improved by 8%</li>
@@ -85,34 +89,37 @@
 
         <!-- RISK TABLE -->
         <h2>Risk Analysis</h2>
-
-        <table>
-            <tr>
-                <th>Risk Level</th>
-                <th>Customers</th>
-            </tr>
-            <tr>
-                <td>Low Risk</td>
-                <td>65</td>
-            </tr>
-            <tr>
-                <td>Medium Risk</td>
-                <td>35</td>
-            </tr>
-            <tr>
-                <td>High Risk</td>
-                <td>12</td>
-            </tr>
+        <table class="analytics-table">
+            <thead>
+                <tr>
+                    <th>Risk Level</th>
+                    <th>Customers</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="risk-badge low">Low Risk</span></td>
+                    <td>65</td>
+                </tr>
+                <tr>
+                    <td><span class="risk-badge med">Medium Risk</span></td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <td><span class="risk-badge high">High Risk</span></td>
+                    <td>12</td>
+                </tr>
+            </tbody>
         </table>
 
         <!-- BUTTON -->
         <div class="button-group">
-            <button onclick="generateReport()">Download Report</button>
+            <button onclick="generateReport()" class="btn-primary">Download Report</button>
         </div>
 
     </div>
-
-</div>
+</main>
 
 </body>
+
 </html>
