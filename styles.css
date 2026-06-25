@@ -953,4 +953,9 @@ body {
 .settings-form .btn-primary {
     max-width: 100%;
 }
+/* --- Brand Alignment Fix --- */
+.logo-title {
+    text-align: center;
+    width: 100%;
+}
 
