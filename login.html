@@ -3,36 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Microfinance System</title>
+    <title>MicroFinance Pro - Login</title>
     <link rel="stylesheet" href="styles.css">
-<script defer src="JavaScript.js"></script>
+    <script defer src="JavaScript.js"></script>
 </head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SM5PENRZQH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-SM5PENRZQH');
-</script>
 <body>
 
-    <div class="login-box">
-        <h1>Microfinance Login</h1>
+<main class="page-wrapper login-wrapper">
+    <!-- Styled with your premium 'business-class' overlay -->
+    <div class="card business-class login-card">
+        
+        <h1 class="logo-title">MicroFinance Pro</h1>
+        <h2 class="hero-subtitle">Secure Gateway Access</h2>
 
-        <input type="text" id="username" placeholder="Username">
+        <form onsubmit="event.preventDefault(); login();" class="login-form-element">
+            
+            <div class="form-group">
+                <label class="form-label">Username</label>
+                <input type="text" id="username" class="form-input" placeholder="Enter username" required>
+            </div>
 
-        <input type="password" id="password" placeholder="Password">
+            <div class="form-group">
+                <label class="form-label">Password</label>
+                <input type="password" id="password" class="form-input" placeholder="••••••••" required>
+            </div>
 
-        <button class="btn-primary" onclick="login()">
-            Login
-        </button>
+            <!-- Dynamic Error Feedback Line -->
+            <p id="message" class="auth-error-msg"></p>
 
-        <p id="message"></p>
+            <div class="button-group">
+                <button type="submit" class="btn-primary">Authenticate Account</button>
+            </div>
+
+        </form>
+
     </div>
-
-    <script src="js/script.js"></script>
+</main>
 
 </body>
 </html>
