@@ -4,34 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Loans - MicroFinance Pro</title>
+
   <link rel="stylesheet" href="styles.css">
-<script defer src="JavaScript.js"></script>
+  <script defer src="JavaScript.js"></script>
+
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SM5PENRZQH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SM5PENRZQH');
+  </script>
 </head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SM5PENRZQH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-SM5PENRZQH');
-</script>
 <body>
-  <!-- Same Navy Nav from dashboard -->
-  <nav class="navbar">
-    <div class="nav-brand">MicroFinance Pro</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Dashboard</a></li>
-      <li><a href="loan.html" class="active">Loans</a></li>
-      <li><a href="customer.html">Customers</a></li>
-      <li><a href="login.html">Logout</a></li>
-    </ul>
-  </nav>
 
-  <div class="container">
+<!-- NAVBAR (UNCHANGED) -->
+<nav class="navbar">
+  <div class="nav-brand">MicroFinance Pro</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Dashboard</a></li>
+    <li><a href="loan.html" class="active">Loans</a></li>
+    <li><a href="customer.html">Customers</a></li>
+    <li><a href="login.html">Logout</a></li>
+  </ul>
+</nav>
+
+<!-- CENTERED PAGE CONTENT -->
+<div class="page-wrapper">
+
+  <div class="card">
+
     <h1>Loan Products We Offer</h1>
-    
-    <!-- Option 1: Loan Product Card -->
+
+    <!-- PRODUCT CARD -->
     <div class="product-card">
       <h2>💼 Micro Business Loan</h2>
       <p><b>Amount:</b> R1,000 - R20,000</p>
@@ -41,19 +48,30 @@
     </div>
 
     <h1 style="margin-top: 40px;">Apply for a Loan</h1>
-    
-<!-- Loan Calculator Form -->
-<div class="form-card">
-  <label>Loan Amount R:</label>
-  <input type="number" id="amount" min="1000" max="20000" value="5000" step="500" placeholder="Enter 1000 to 20000">
-  
-  <label>Term in Months:</label>
-  <input type="number" id="months" min="3" max="12" value="6" step="1" placeholder="Enter 3 to 12">
-  
-  <label>Customer Name:</label>
-  <input type="text" id="customer" placeholder="e.g. Thabo Mokoena">
-  
-  <div class="calc-box">
-    <h3>Your Repayment Plan</h3>
-    <p>Interest 10%: <span id="interest">R500.00</span></p>
-    <p>Total to Pay:</p>
+
+    <!-- FORM -->
+    <div class="form-card">
+
+      <label>Loan Amount R:</label>
+      <input type="number" id="amount" min="1000" max="20000" value="5000" step="500">
+
+      <label>Term in Months:</label>
+      <input type="number" id="months" min="3" max="12" value="6" step="1">
+
+      <label>Customer Name:</label>
+      <input type="text" id="customer" placeholder="e.g. Thabo Mokoena">
+
+      <div class="calc-box">
+        <h3>Your Repayment Plan</h3>
+        <p>Interest 10%: <span id="interest">R500.00</span></p>
+        <p>Total to Pay:</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
