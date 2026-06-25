@@ -958,4 +958,131 @@ body {
     text-align: center;
     width: 100%;
 }
+/* --- Comprehensive Mobile Optimization (Phones under 600px) --- */
+@media (max-width: 600px) {
+    
+    /* 1. Reset Global Card Padding to save screen space */
+    .card {
+        padding: 25px 15px !important;
+        width: 100% !important;
+    }
+    
+    .page-title {
+        font-size: 1.6rem !important;
+        margin-bottom: 15px !important;
+    }
+
+    /* 2. CUSTOMERS.HTML FORM FIXES */
+    .form-grid-inputs {
+        grid-template-columns: 1fr !important; /* Stack inputs instead of side-by-side */
+        gap: 0 !important;
+    }
+    
+    .form-input {
+        padding: 12px 14px !important;
+        font-size: 0.9rem !important;
+    }
+
+    /* 3. ANALYTICS.HTML CHART & CARDS FIXES */
+    .analytics-cards {
+        grid-template-columns: repeat(2, 1fr) !important; /* Force neat 2x2 grid for stats boxes */
+        gap: 10px !important;
+    }
+    
+    .stat-box {
+        padding: 15px 10px !important;
+    }
+    
+    .stat-box p {
+        font-size: 1.4rem !important;
+    }
+
+    .chart-container {
+        padding: 25px 10px 10px 10px !important;
+        height: 200px !important; /* Slightly shorter to prevent scrolling */
+        gap: 8px !important;
+    }
+    
+    .bar {
+        border-radius: 4px 4px 0 0 !important;
+    }
+    
+    .bar span {
+        font-size: 0.65rem !important;
+        bottom: -20px !important;
+    }
+
+    .performance-box {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 10px !important;
+        padding: 15px !important;
+    }
+
+    /* 4. APPROVALS.HTML TABLE MOBILIZATION */
+    /* This completely transforms the table so you don't have to scroll sideways */
+    .approvals-table, 
+    .approvals-table thead, 
+    .approvals-table tbody, 
+    .approvals-table th, 
+    .approvals-table td, 
+    .approvals-table tr { 
+        display: block !important; 
+        width: 100% !important;
+    }
+    
+    /* Hide the header completely on phone screens */
+    .approvals-table thead tr { 
+        position: absolute !important;
+        top: -9999px !important;
+        left: -9999px !important;
+    }
+    
+    .approvals-table tr {
+        background: rgba(0, 0, 0, 0.2) !important;
+        border: 1px solid rgba(255, 255, 255, 0.05) !important;
+        border-radius: 12px !important;
+        margin-bottom: 15px !important;
+        padding: 15px !important;
+    }
+    
+    .approvals-table td { 
+        border: none !important;
+        position: relative !important;
+        padding: 8px 0 8px 45% !important; /* Pushes the value to the right */
+        text-align: right !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+    
+    /* Add readable text labels to the left side of the stacked rows */
+    .approvals-table td::before { 
+        position: absolute !important;
+        left: 10px !important;
+        width: 40% !important; 
+        text-align: left !important;
+        font-weight: 600 !important;
+        color: #cbd5e1 !important;
+        font-size: 0.85rem !important;
+        text-transform: uppercase !important;
+    }
+    
+    /* Dynamically insert the column names as labels */
+    .approvals-table td:nth-of-type(1)::before { content: "Customer"; }
+    .approvals-table td:nth-of-type(2)::before { content: "Amount"; }
+    .approvals-table td:nth-of-type(3)::before { content: "Status"; }
+    .approvals-table td:nth-of-type(4)::before { content: "Action"; }
+
+    .action-buttons {
+        width: 100% !important;
+        justify-content: flex-end !important;
+        margin-top: 5px !important;
+    }
+
+    .btn-action {
+        padding: 6px 14px !important;
+        font-size: 0.8rem !important;
+    }
+}
 
