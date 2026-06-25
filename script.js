@@ -25,51 +25,46 @@
         message.innerText = "Invalid username or password";
     }
 }
-// ==========================================// 3. LOAN CALCULATOR SYSTEM (loans.html)// ==========================================const amountInput = document.getElementById('amount');const monthsInput = document.getElementById('months');const summary = document.getElementById('summary');
+// ==========================================
+// 3. LOAN CALCULATOR SYSTEM (loans.html)
+// ==========================================
+const amountInput = document.getElementById('amount');
+const monthsInput = document.getElementById('months');
+
 function calculateLoan() {
-    if (!amountInput || !monthsInput || !summary) return;
+    const interestText = document.getElementById('interest');
+    const totalRepayText = document.getElementById('totalRepay');
+    const monthlyRepayText = document.getElementById('monthlyRepay');
+    const interestRateText = document.getElementById('interestRateText');
+
+    // Safe exit clause if calculator targets are missing from current view
+    if (!amountInput || !monthsInput || !interestText || !totalRepayText || !monthlyRepayText) return;
 
     const amount = parseFloat(amountInput.value) || 0;
     const months = parseInt(monthsInput.value) || 1;
   
-    let interestRate = 0;
-    if (months <= 3) interestRate = 0.10;       // 10%
-    else if (months <= 6) interestRate = 0.15;  // 15% 
-    else if (months <= 12) interestRate = 0.20; // 20%
-    else interestRate = 0.30;                   // 30%
+    // Flat rate configuration matching product rules (10% flat rate)
+    let interestRate = 0.10; 
 
-    const total = amount + (amount * interestRate);
-    const monthly = total / months;
+    const totalInterest = amount * interestRate * months;
+    const totalRepay = amount + totalInterest;
+    const monthlyRepay = totalRepay / months;
 
-    summary.innerHTML = `
-        <p><b>Total to repay:</b> R${total.toFixed(2)}</p>
-        <p><b>Monthly payment:</b> R${monthly.toFixed(2)}</p>
-        <p><b>Interest rate:</b> ${interestRate * 100}%</p>
-    `;
+    // Direct text layout assignment safely mapping integers
+    if (interestRateText) interestRateText.textContent = `${(interestRate * 100)}% per month`;
+    interestText.textContent = `R${totalInterest.toFixed(2)}`;
+    totalRepayText.textContent = `R${totalRepay.toFixed(2)}`;
+    monthlyRepayText.textContent = `R${monthlyRepay.toFixed(2)}`;
 }
-// Only append event listeners if the element elements exist on the screenif (amountInput) amountInput.addEventListener('input', calculateLoan);if (monthsInput) monthsInput.addEventListener('change', calculateLoan);
-// ==========================================// 4. REPAYMENT PROCESSING SYSTEM (repayments.html)// ==========================================function processPayment() {
-    const customerInput = document.getElementById("customerName");
-    const loanInput = document.getElementById("loanNumber");
-    const balanceInput = document.getElementById("balance");
-    const paymentInput = document.getElementById("payment");
-    const receipt = document.getElementById("receipt");
 
-    if (!customerInput || !loanInput || !balanceInput || !paymentInput || !receipt) return;
+// Attach listeners safely
+if (amountInput) amountInput.addEventListener('input', calculateLoan);
+if (monthsInput) monthsInput.addEventListener('input', calculateLoan);
 
-    let customer = customerInput.value;
-    let loan = loanInput.value;
-    let balance = parseFloat(balanceInput.value) || 0;
-    let payment = parseFloat(paymentInput.value) || 0;
-    let newBalance = balance - payment;
-
-    receipt.innerHTML = `
-        <h3>Payment Successful</h3>
-        <p><strong>Customer:</strong> ${customer}</p>
-        <p><strong>Loan Number:</strong> ${loan}</p>
-        <p><strong>Payment:</strong> R${payment.toFixed(2)}</p>
-        <p><strong>Remaining Balance:</strong> R${newBalance.toFixed(2)}</p>
-    `;
+// Trigger initial baseline calculations safely upon DOM load
+document.addEventListener("DOMContentLoaded", () => {
+    calculateLoan();
+});
 }
 // ==========================================// 5. METRICS & ANALYTICS DASHBOARD (analytics.html)// ==========================================// Wait for DOM to finish loading to safely push stats values onto the interface
 document.addEventListener("DOMContentLoaded", () => {
