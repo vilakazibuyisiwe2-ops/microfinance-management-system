@@ -17,61 +17,83 @@
     gtag('config', 'G-SM5PENRZQH');
   </script>
 </head>
-
 <body>
 
-<!-- NAVBAR (UNCHANGED) -->
-<nav class="navbar">
-  <div class="nav-brand">MicroFinance Pro</div>
-  <ul class="nav-links">
-    <li><a href="index.html">Dashboard</a></li>
-    <li><a href="loan.html" class="active">Loans</a></li>
-    <li><a href="customer.html">Customers</a></li>
-    <li><a href="login.html">Logout</a></li>
-  </ul>
-</nav>
+<!-- Unified Navigation Bar -->
+<header class="navbar-wrapper">
+    <nav class="main-nav">
+        <a href="index.html">Dashboard</a>
+        <a href="customers.html">Customers</a>
+        <a href="loans.html" class="active">Loans</a>
+        <a href="repayments.html">Repayments</a>
+        <a href="approvals.html">Approvals</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="admin.html">Admin</a>
+        <a href="login.html">Logout</a>
+    </nav>
+</header>
 
-<!-- CENTERED PAGE CONTENT -->
-<div class="page-wrapper">
+<main class="page-wrapper">
+    <!-- Styled with your premium 'business-class' overlay -->
+    <div class="card business-class loans-page-card">
+        
+        <h1 class="page-title">Loan Products We Offer</h1>
 
-  <div class="card">
+        <!-- PRODUCT CATALOG GRID -->
+        <div class="products-grid">
+            <div class="product-item">
+                <h3>💼 Micro Business Loan</h3>
+                <div class="product-details-box">
+                    <p><strong>Amount:</strong> <span class="text-muted">R1,000 - R20,000</span></p>
+                    <p><strong>Interest:</strong> <span class="text-accent">10% per month flat rate</span></p>
+                    <p><strong>Term:</strong> <span class="text-muted">3 - 12 months</span></p>
+                    <p><strong>Payment:</strong> <span class="text-muted">Monthly installments</span></p>
+                </div>
+            </div>
+        </div>
 
-    <h1>Loan Products We Offer</h1>
+        <h2 class="section-divider-title">Apply & Estimate Repayments</h2>
 
-    <!-- PRODUCT CARD -->
-    <div class="product-card">
-      <h2>💼 Micro Business Loan</h2>
-      <p><b>Amount:</b> R1,000 - R20,000</p>
-      <p><b>Interest:</b> 10% per month flat rate</p>
-      <p><b>Term:</b> 3 - 12 months</p>
-      <p><b>Payment:</b> Monthly installments</p>
+        <!-- INTERACTIVE CALCULATOR FORM -->
+        <div class="loan-calculator-form">
+            
+            <div class="form-group">
+                <label class="form-label">Customer Name</label>
+                <input type="text" id="customer" class="form-input" placeholder="e.g. Thabo Mokoena" required>
+            </div>
+
+            <div class="form-grid-inputs">
+                <div class="form-group">
+                    <label class="form-label">Loan Amount (R)</label>
+                    <input type="number" id="amount" class="form-input" min="1000" max="20000" value="5000" step="500">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Term (Months)</label>
+                    <input type="number" id="months" class="form-input" min="3" max="12" value="6" step="1">
+                </div>
+            </div>
+
+            <!-- PREMIUM DYNAMIC SUMMARY BOX -->
+            <div class="calc-box" id="summary">
+                <h3>Your Repayment Plan</h3>
+                <div class="calc-outputs">
+                    <p><b>Interest Rate:</b> <span id="interestRateText">10%</span></p>
+                    <p><b>Total Interest:</b> <span id="interest" class="text-muted">R500.00</span></p>
+                    <p class="total-row"><b>Total to Pay:</b> <span id="totalRepay" class="text-accent-vibrant">R5,500.00</span></p>
+                    <p class="monthly-row"><b>Monthly Installment:</b> <span id="monthlyRepay">R916.67</span></p>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button type="button" onclick="submitLoanApplication()" class="btn-primary">Submit Application</button>
+            </div>
+
+        </div>
+
     </div>
-
-    <h1 style="margin-top: 40px;">Apply for a Loan</h1>
-
-    <!-- FORM -->
-    <div class="form-card">
-
-      <label>Loan Amount R:</label>
-      <input type="number" id="amount" min="1000" max="20000" value="5000" step="500">
-
-      <label>Term in Months:</label>
-      <input type="number" id="months" min="3" max="12" value="6" step="1">
-
-      <label>Customer Name:</label>
-      <input type="text" id="customer" placeholder="e.g. Thabo Mokoena">
-
-      <div class="calc-box">
-        <h3>Your Repayment Plan</h3>
-        <p>Interest 10%: <span id="interest">R500.00</span></p>
-        <p>Total to Pay:</p>
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
+</main>
 
 </body>
+
 </html>
